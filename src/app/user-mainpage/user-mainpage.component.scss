@@ -1,0 +1,52 @@
+.top-margin{
+    margin-top: 50px;
+}
+
+
+.header-text{
+    position: relative;
+    font-size: 150%;
+    top:5px;
+    left: -20px;
+}
+
+.card-value{
+    float: right;
+    margin-top: 15px;
+    // margin-right: 5px;
+}
+
+.icon1 {
+    content: url(https://images.mint.com/web-client/images/icons/mint/icon-money-sm-gray6.svg);
+    width:50px;
+    height:50px;
+}
+
+.icon2 {
+    content: url(https://images.mint.com/web-client/images/icons/mint/icon-card-sm-gray6.svg);
+    width:50px;
+    height:50px;
+}
+
+.icon3 {
+    content: url(https://images.mint.com/web-client/images/icons/mint/icon-house-sm-gray6.svg);
+    width:50px;
+    height:50px;
+}
+
+
+.header{
+background: url('/assets/bgImg.jpg');
+background-attachment: fixed;
+background-size: 100% 1200px;
+background-position: center;
+}
+
+.overlay{
+position: absolute;
+height: 1200px;
+min-width: 100%;
+left: 0;
+margin-top: 0px;
+background: rgba(244, 244, 244, 0.7);
+}

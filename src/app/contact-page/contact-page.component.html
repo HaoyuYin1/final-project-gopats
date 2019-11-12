@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card card-container shadow rounded">
+    <h2 class="card-body text-success" id="emailHelp" *ngIf="bool">Message has been sent!</h2>
+    <form (ngSubmit)="sendEmail()" #form="ngForm" *ngIf="!bool">
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" class="form-control" placeholder="Subject" name="subject1" #subject1="ngModel" [(ngModel)]="subject" required>
+
+      </div>
+      <div class="form-group">
+        <label>Content</label>
+        <textarea type="text" rows="5" placeholder="Content" class="form-control" name="content1" #content1="ngModel" [(ngModel)]="content" required></textarea>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="!form.valid">Send</button>
+    </form>
+  </div>
+</div>

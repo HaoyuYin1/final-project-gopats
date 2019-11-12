@@ -1,0 +1,71 @@
+.jumbotron {
+  padding: 40px 32px;
+  background-color: transparent;
+}
+
+.lead {
+  margin-bottom: 0;
+}
+
+#chartContainer {
+  margin-bottom: 1rem;
+  height: 370px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#head1 {
+  background: solid;
+}
+
+.icon0 {
+  content: url("/assets/total.png");
+  width: 50px;
+  height: 50px;
+}
+
+.icon1 {
+  content: url("/assets/groceries.png");
+  width: 50px;
+  height: 50px;
+}
+
+.icon2 {
+  content: url("/assets/gas.png");
+  width: 50px;
+  height: 50px;
+}
+
+.icon3 {
+  content: url("/assets/other.png");
+  width: 50px;
+  height: 50px;
+}
+
+.content {
+  font-size: 150%;
+  bottom: 15px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.content2 {
+  font-size: 150%;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.budget-title {
+  position: relative;
+  left: 20px;
+}
+
+.trans-title {
+  position: relative;
+}
+
+.budget-body {
+  position: relative;
+  top: 10px;
+}

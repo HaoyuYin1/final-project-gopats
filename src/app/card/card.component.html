@@ -1,0 +1,27 @@
+
+<div class="container">
+  <div class="card card-container shadow rounded">
+    <form>
+      <div class="form-group">
+        <label for="nameOnCard">Card Number:</label>
+        <input type="text" class="form-control" name="cardNumber" placeholder="Card Number" [(ngModel)]="account">
+      </div>
+      <div class="form-group">
+        <label for="nameOnCard">Name on Card:</label>
+        <input type="text" class="form-control" name="nameOnCard" placeholder="Name on Card" >
+      </div>
+      <div class="form-group">
+        <label for="nameOnCard">Zipcode:</label>
+        <input type="text" class="form-control" name="postcode" placeholder="02115" >
+      </div>
+      <div>
+      <div>
+      <button type="submit" class="btn btn-success btn-block" (click)="addCard()">Add</button>
+      </div>
+      <div>
+      <button id="cancel" type="cancel" class="btn btn-secondary btn-block" (click)="back()">Cancel</button>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>

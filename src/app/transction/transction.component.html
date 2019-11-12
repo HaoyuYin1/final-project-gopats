@@ -1,0 +1,41 @@
+<div class="card mb-0 mt-0 shadow rounded">
+  <p class="display-4 pl-3 pt-3">{{user.fname}} {{user.lname}}</p>
+  <p id="cardacc" class="display-4 pl-3 pt-3">Card: {{account.account}}</p>
+  <hr class="m-2">
+  <div>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item border-0 py-0">
+        <p class="text-secondary small mb-0">Balance</p>
+        <p class="h5 mb-2 text-primary">${{account.balance}}</p>
+      </li>
+      <li class="list-group-item border-0 py-0">
+        <p class="text-secondary small mb-0">Total Credit</p>
+        <p class="h5 mb-2 text-primary">${{account.credit.toFixed(2)}}</p>
+      </li>
+    </ul>
+  </div>
+  <button (click)="back()" class="btn btn-outline-secondary btn-block">Back</button>
+
+</div>
+
+
+<div class="card mt-0 shadow rounded">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" class="border-top-0">Date</th>
+        <th scope="col" class="border-top-0">Description</th>
+        <th scope="col" class="border-top-0">Category</th>
+        <th scope="col" class="border-top-0">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tran of trans">
+        <td>{{tran[1] | slice:0:10}}</td>
+        <td>{{tran[2]}}</td>
+        <td>{{tran[3]}}</td>
+        <td>${{tran[0].toFixed(2)}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

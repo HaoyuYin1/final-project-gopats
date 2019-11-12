@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="card card-container shadow rounded">
+    <form>
+      <div class="form-group">
+        <div class="form-group">
+          <div class="float-left">
+            <span class="icon2" title="bank icon"></span>
+          </div>
+          <div>
+            <span id="label1" for="removeCard">{{account.account}}</span>
+          </div>
+        </div>
+        <div>
+          <button id="button1" type="submit" class="btn btn-danger btn-block" (click)="removeAcc()">Remove</button>
+        </div>
+        <div>
+          <button type="cancel" class="btn btn-secondary btn-block" (click)="back()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

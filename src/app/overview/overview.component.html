@@ -1,0 +1,37 @@
+<div class="jumbotron mb-3">
+  <h1 class="display-4">Hello, {{user.fname}} {{user.lname}}</h1>
+  <!-- <p class="lead">Welcome! </p> -->
+</div>
+
+<!-- The Last three transction -->
+<div class="card mb-3 shadow rounded" *ngIf="account!=undefined && account.length !=0">
+  <div class="card-header">
+    <span class="h4">Latest Transctions - {{currentMonth}}</span>
+    <a [routerLink]="['./transction']" class="float-right">Show All</a>
+  </div>
+  <ul class="list-group list-group-flush" *ngFor="let tran of trans">
+    <li class="list-group-item">
+      <span class="content2 trans-title">{{tran[2]}}</span>
+      <span class="float-right content2">${{tran[0].toFixed(2)}}</span>
+    </li>
+  </ul>
+</div>
+
+<!-- Monthly Budget -->
+<div class="card mb-3 shadow rounded" id="chartContainer"></div>
+
+<div class="card mb-3 shadow rounded">
+  <div class="card-header">
+    <span class="h4">Monthly Budget - {{currentMonth}}</span>
+    <a [routerLink]="['./budget']" class="float-right">Manage Budget</a>
+  </div>
+  <ul class="list-group list-group-flush" *ngFor="let budget of budgets; let i = index">
+    <li class="list-group-item">
+      <span [ngClass]="'icon'+ i" title="bank icon"></span>
+      <span class="content budget-title text-danger" *ngIf="spend[budget[0]]>budget[1]">{{budget[0]}}</span>
+      <span class="content budget-title" *ngIf="spend[budget[0]]<=budget[1]">{{budget[0]}}</span>
+      <span class="float-right content budget-body text-danger" *ngIf="spend[budget[0]]>budget[1]">${{spend[budget[0]].toFixed(2)}}/{{budget[1].toFixed(2)}}</span>
+      <span class="float-right content budget-body" *ngIf="spend[budget[0]]<=budget[1]">${{spend[budget[0]].toFixed(2)}}/{{budget[1].toFixed(2)}}</span>
+    </li>
+  </ul>
+</div>

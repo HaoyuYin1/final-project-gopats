@@ -1,0 +1,24 @@
+<div class="card mb-3 shadow rounded">
+  <div class="card-header">
+    <span class="h4">{{currentMonth}} Budget</span>
+    <a [routerLink]="['/user-mainpage']" (click)="back()" class="float-right">Back</a>
+    <a id="backA" [routerLink]="['/user-mainpage']" (click)="saveChange()" class="float-right">Save</a>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <span [ngClass]="'icon1'" ></span>
+      <span class="content budget-title">{{categroy[1]}}</span>
+      <input type="number"  class="form-control float-right content budget-body" [(ngModel)]="user.budget[0]">
+    </li>
+    <li class="list-group-item">
+      <span [ngClass]="'icon2'" ></span>
+      <span class="content budget-title">{{categroy[2]}}</span>
+      <input type="number"  class="form-control float-right content budget-body" [(ngModel)]="user.budget[1]">
+    </li>
+    <li class="list-group-item">
+      <span [ngClass]="'icon3'" ></span>
+      <span class="content budget-title">{{categroy[3]}}</span>
+      <input type="number"  class="form-control float-right content budget-body" [(ngModel)]="user.budget[2]">
+    </li>
+  </ul>
+</div>

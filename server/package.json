@@ -1,0 +1,17 @@
+{
+  "name": "gopats-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Yue Zheng",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.3",
+    "nodemailer": "^6.1.1"
+  }
+}

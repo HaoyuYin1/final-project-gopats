@@ -1,0 +1,55 @@
+<div class="top-margin"></div>
+
+<header class="header">
+  <div class="overlay"></div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+
+        <!-- ADD account -->
+        <div class="card mb-3 shadow rounded" style="max-width: 18rem;">
+          <div class="card-header">
+            <div class="row no-gutters">
+              <div class="col-6 col-md-4">
+                <span class="icon2" title="bank icon"></span>
+              </div>
+              <div class="col-12 col-sm-6 col-md-8 card-title">
+                <span class="header-text">Credit Card</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body text-secondary">
+            <button class="mt-3 btn btn-block btn-outline-success" [routerLink]="['/user-mainpage/card']" *ngIf="account == undefined || account.length ==0">Link My Card</button>
+            <button class="mt-3 btn btn-block btn-outline-success" [routerLink]="['/user-mainpage/card']" *ngIf="account != undefined && account.length > 0">Link Another Card</button>
+          </div>
+        </div>
+
+        <div class="card shadow rounded" style="max-width: 18rem;" *ngFor="let a of account">
+          <div class="card-header">
+            <div class="row no-gutters">
+              <div class="col-6 col-md-4">
+                <span class="icon2" title="bank icon"></span>
+              </div>
+              <div class="col-12 col-sm-6 col-md-8 card-title">
+                <a [routerLink]="" class="header-text" (click)="changeAccount(a)">{{a.account}}</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body text-secondary">
+            <h5 class="card-title">Credit: ${{a.credit.toFixed(2)}}</h5>
+            <h5 class="card-title">Balance: ${{a.balance.toFixed(2)}}</h5>
+            <button class="mt-3 btn btn-outline-danger btn-block" (click)="removeAccount(a)">Remove Card</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+  </div>
+</header>
